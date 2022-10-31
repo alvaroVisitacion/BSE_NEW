@@ -152,16 +152,16 @@
           <hr class="d-md-none text-white-50">
            <!-- enlaces redes sociales -->
           <ul class="navbar-nav  flex-row flex-wrap text-light">
-
+            <!-- 
            <li class="nav-item col-6 col-md-auto p-3">
                 <i class="bi bi-twitter"></i>
-                <small class="d-md-none ms-2">Twitter</small>  
+                <small class="d-md-none ms-2"> </small>  
             </li>
 
             <li class="nav-item col-6 col-md-auto p-3">
               <i class="bi bi-github"></i>
-              <small class="d-md-none ms-2">GitHub</small> 
-            </li>
+              <small class="d-md-none ms-2"> </small> 
+            </li> 
 
             <li class="nav-item col-6 col-md-auto p-3">
               <i class="bi bi-whatsapp"></i>
@@ -173,7 +173,7 @@
               <small class="d-md-none ms-2">Facebook</small>
             </li>
 
-          </ul>
+          </ul>-->
               <!-- Right navbar links -->
           <!-- LOGIN  -->
           <ul class="navbar-nav ml-auto">
