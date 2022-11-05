@@ -13,14 +13,15 @@
         margin: 0;
     }
 
-    h1 {
+    h2 {
         font-family:'Helvetica','Verdana','Monaco',sans-serif;
         color: #0155E5 ;
-    }
-    .full-height {
-        height: 100vh;
-    }
-
+        font-weight: 700;
+    } 
+    h4 {
+        font-family:'Helvetica','Verdana','Monaco',sans-serif;
+        color: #165A04 ;
+    } 
     .flex-center {
         align-items: center;
         display: flex;
@@ -62,101 +63,136 @@
     .m-b-md {
         margin-bottom: 30px;
     }
-    #background {
-    height: 500px;
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;
+ 
   
-    color: rgb(00,200,200);
+    }
+    .card-body{        
+             
+            border-radius: 6px;
+            overflow: hidden;
+            background-color:#ff2;
+            box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+            transition: all 400ms ease-out;
+            cursor: default;
+        }
+    .card:hover{
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+            
+        } 
+    .card img{
+            width: 30%;
+             
+        }
+    .formulario {
+    background: rgba(229, 233, 218, 0.548);
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 0, 123, 0.568);
+    color: white;
+}
+
+    .opa{
+        background: rgba(229, 233, 218, 0.548);
+        opacity: 90%;
+        color: white;
+        height: top;
+        width: 55px;
+        margin-top: 20px;
     }
 
-
+ 
 </style>
 </head>
 
-
-
+ <br> <br>
 
     <div class="container">
-    <div class="row ">
-        <div class="col-md-12" >
-            <div class="card">
+        <div class="row ">
+            <div class="col-md-12" >
+                <div class="card " style="background-image: url(../img/bod.jpg);">
+                    <!--   <div class="card-header">{{ __('Bienvenido!!!') }} </div>
+                    <h1><font color="black" size="7" style="font-family: Castellar" >BSE</font></h1> 
+                    <img src="{{asset('adminlte/dist/img/fondo01.jpg')}}" height="500" width="1125">   -->
+                    <div class="card-body ">
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+                            <ol class="carousel-indicators d-none ">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> 
+                                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                
+                                <div class="carousel-item active"  id="background" >
+                                <img class="d-block w-100 opa" src="{{asset('adminlte/dist/img/asesoramiento6.jpg')}}" alt="Third slide"  >
+                                    <div class="carousel-caption d-block d-md-block formulario">
+                                        <h2 >Uno</h2>
+                                        <h4>Dos</h4>
+                                    </div>
+                                </div>
+                                <div class="carousel-item"  id="background" >
+                                <img class="d-block w-100 opa" src="{{asset('adminlte/dist/img/asesoramiento4.jpg')}}" alt="Fourth slide">
+                                    <div class="carousel-caption d-block d-md-block formulario">
+                                        <h2 >Uno</h2>
+                                        <h4>Dos</h4>
+                                    </div>
+                                </div>
+                                <div class="carousel-item"  id="background" >
+                                <img class="d-block w-100 opa" src="{{asset('adminlte/dist/img/acuerdo3.jpg')}}" alt="fifth  slide">
+                                    <div class="carousel-caption d-block d-md-block formulario">
+                                        <h2 >Uno</h2>
+                                        <h4>Dos</h4>
+                                    </div>
+                                </div>
+                                <div class="carousel-item"  id="background" >
+                                <img class="d-block w-100 opa" src="{{asset('adminlte/dist/img/reportes.jpg')}}" alt="sixth slide" >
+                                    <div class="carousel-caption d-block d-md-block formulario">
+                                        <h2 >Uno</h2>
+                                        <h4>Dos</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Siguiente</span>
+                            </a>
+    
+                        </div>
+                </div> 
+            </div>
+        </div> 
+    </div>
                 <!--   <div class="card-header">{{ __('Bienvenido!!!') }} </div>
                    <h1><font color="black" size="7" style="font-family: Castellar" >BSE</font></h1> 
                   <img src="{{asset('adminlte/dist/img/fondo01.jpg')}}" height="500" width="1125">   -->
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> 
-                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" id="background" >
-                            <img class="d-block w-100" src="{{asset('adminlte/dist/img/asesoramiento.jpg')}}" alt="First slide"  >
-                            <div class="carousel-caption d-none d-md-block">
-                                <h1>Uno</h1>
-                                <h2>Dos</h2>
-                            </div>
-                            </div> 
-                            <div class="carousel-item"  id="background" >
-                            <img class="d-block w-100" src="{{asset('adminlte/dist/img/asesoramiento3.jpg')}}" alt="Third slide"  >
-                            <div class="carousel-caption d-none d-md-block">
-                                <h1>Uno</h1>
-                                <h2>Dos</h2>
-                            </div>
-                            </div>
-                            <div class="carousel-item"  id="background" >
-                            <img class="d-block w-100" src="{{asset('adminlte/dist/img/asesoramiento4.jpg')}}" alt="Fourth slide">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h1>Uno</h1>
-                                <h2>Dos</h2>
-                            </div>
-                            </div>
-                            <div class="carousel-item"  id="background" >
-                            <img class="d-block w-100" src="{{asset('adminlte/dist/img/acuerdo2.jpg')}}" alt="fifth  slide">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h1>Uno</h1>
-                                <h2>Dos</h2>
-                            </div>
-                            </div>
-                            <div class="carousel-item"  id="background" >
-                            <img class="d-block w-100" src="{{asset('adminlte/dist/img/reportes.jpg')}}" alt="sixth slide" >
-                            <div class="carousel-caption d-none d-md-block">
-                                <h1>Uno</h1>
-                                <h2>Dos</h2>
-                            </div>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Anterior</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Siguiente</span>
-                        </a>
-
-                        
-                    </div>
-                </div>
+               <br><br>
+   <div class="container ">
+        <div class="row ">
+            <div class="col-md-12 " >
+            <h2> A mimir </h2>
             </div>
         </div>
-    </div>
-
-    
-</div>
-
+   </div>
+               <br><br>
+   <div class="container ">
+        <div class="row ">
+            <div class="col-md-12 formulario" >
+            <h4> zzzzzz </h4>
+            </div>
+        </div>
+   </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

@@ -143,11 +143,11 @@
 
 <div class="card_">
     <div class="tittle-cards">
-         <h2><font color="black" size="6" style="font-family: Times New Roman" >FORMACIONES</font></h2>  
+         <h2><font color="black" size="6" style="font-family: Times New Roman" >EVENTOS</font></h2>  
     </div>
     <div class="card-body">
         <div class="container-card ">
-         <div class="row contenido" >       
+         <div class="row contenido">       
         
             </div>
         </div>
@@ -157,7 +157,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
 <script>
              $('.des').hide();
-var arr=<?php echo $formaciones?>;
+var arr=<?php echo $eventos?>;
     $(document).ready(function(){
 
 
@@ -167,14 +167,15 @@ var alvaro='';
                
                     <div class="col-md-6">
                     <div class="card_">
-                        <div class="card-body ${arr[vari]["for_codigo"]}" data-alv="${arr[vari]["for_codigo"]}" data-des="${arr[vari]["for_descripcion"]}"  >
-                         <h5 class="card-title" style="height:40px">${arr[vari]["for_titulo"]}</h5>
+                        <div class="card-body ${arr[vari]["eve_codigo"]}" data-alv="${arr[vari]["eve_codigo"]}" data-des="${arr[vari]["eve_descripcion"]}" data-ini="${arr[vari]["eve_fechaini"]}"  >
+                         <h5 class="card-title" style="height:40px">${arr[vari]["eve_titulo"]}</h5>
                         <figure>
-                         <img class="card-img-top" src="/img/${arr[vari]["for_imagen"]}" alt="Card image cap"  >
+                         <img class="card-img-top" src="/img/${arr[vari]["eve_imagen"]}" alt="Card image cap"  >
                          </figure>
-                         <div class="card-body des" id="des_${arr[vari]["for_codigo"]}">
+                         <h6   style="height:10px">${arr[vari]["eve_fechaini"]}</h6>
+                         <div class="card-body des" id="des_${arr[vari]["eve_codigo"]}">
                          
-                         <a class="close${arr[vari]["for_codigo"]}">Ver mas</a>
+                         <a class="close${arr[vari]["eve_codigo"]}">Ver mas</a>
                              
                          </div>
                      </div>
@@ -186,13 +187,13 @@ var alvaro='';
 
                 
                  
-            $('.'+arr[vari]["for_codigo"]).on('click',function(){
+            $('.'+arr[vari]["eve_codigo"]).on('click',function(){
                     var data=$(this).data('alv');
                     var des=$(this).data('des');
                     console.log(data);
                     $('#des_'+data).html(des);
              });
-             $('.close'+arr[vari]["for_codigo"]).on('click',function(){
+             $('.close'+arr[vari]["eve_codigo"]).on('click',function(){
                     var data=$(this).data('alv');
                     $('#des_'+data).hide();
              });

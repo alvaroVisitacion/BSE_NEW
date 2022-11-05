@@ -33,11 +33,12 @@ Route::get('cancelar',function(){
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admin-level')->group(function(){
 Route::resource('/users', 'UsersController',['except'=>['show','create','store']]);
 });
-
 //Paginas publicas
 Route::get('/p_servicios','ServiciosPublicController@mostrar_Servicios');
 Route::get('/p_socios','SocioPublicController@mostrar_Socios');
 Route::get('/p_formaciones','FormacionPublicController@mostrar_Formaciones');
+Route::get('/p_productos','ProductoPublicController@mostrar_Productos');
+Route::get('/p_eventos','EventoPublicController@mostrar_Eventos');
 
 
 Route::middleware('can:admin-level')->group(function(){ 
@@ -53,7 +54,7 @@ Route::middleware('can:admin-level')->group(function(){
     Route::resource('productos','ProductoController')->names('productos'); 
     Route::get('change_status/producto/{producto}', 'ProductoController@change_status')->name('change.status.productos');
      
-    Route::resource('eventoS','EventoController')->names('eventos'); 
+    Route::resource('eventos','EventoController')->names('eventos'); 
     Route::get('change_status/evento/{evento}', 'EventoController@change_status')->name('change.status.eventos');
      
 

@@ -89,131 +89,159 @@
     
       <nav class="navbar navbar-expand-md navbar-dark bg-gradient-primary">-->
       <header>
-      <section class="wrapper">
-      <nav class="navbar navbar-expand-md navbar-dark" >
-        <div class="container-fluid">
-        <!-- icono o nombre -->
-          <a class="navbar-brand" href="{{url('/')}}">
-              <div class="image">
-                <img src="{{asset('adminlte/dist/img/hbse3.png')}}" style="border:0; width:405px; height:65px">
-              </div> 
-          </a> 
-                
-        <!-- boton del menu -->
+       
+        <nav class="navbar navbar-expand-md navbar-dark" >
+          <div class="container-fluid">
+          <!-- icono o nombre -->
+            <a class="navbar-brand" href="{{url('/')}}">
+                <div class="image">
+                  <img src="{{asset('adminlte/dist/img/hbse3.png')}}" style="border:0; width:405px; height:65px">
+                </div> 
+            </a> 
+                  
+          <!-- boton del menu -->
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <!-- elementos del menu colapsable -->
-        <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav me-auto"> 
-          <li class="nav-header"></li>
-          @guest
-            
-             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{action('ServiciosPublicController@mostrar_Servicios')}}">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{action('FormacionPublicController@mostrar_Formaciones')}}">Formacion</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{action('SocioPublicController@mostrar_Socios')}}">Socios</a>
-            </li>
-          @else
-           <!--SEGUN PRIVILEGIO-->
-           <li class="nav-item">
-              <a class="nav-link" href="{{route('socios.index')}}">Socios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('formaciones.index')}}">Formacion</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('servicios.index')}}">Servicios</a>
-            </li>
-            @can('admin-level')
-            <li class="nav-item">
-              <a class="nav-link" href="#"> </a>
-            </li>
-            @endcan
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Públicos
-              </a>
-
-              <ul class="dropdown-menu  " aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{action('ServiciosPublicController@mostrar_Servicios')}}">Servicios</a>
-                <a class="dropdown-item" href="{{action('FormacionPublicController@mostrar_Formaciones')}}">Formaciones</a>  
-                <a class="dropdown-item" href="{{action('SocioPublicController@mostrar_Socios')}}">Socios</a>
-              </ul>
-            </li>
-            @endguest
-          </ul>
-          <hr class="d-md-none text-white-50">
-           <!-- enlaces redes sociales -->
-          <ul class="navbar-nav  flex-row flex-wrap text-light">
-            <!-- 
-           <li class="nav-item col-6 col-md-auto p-3">
-                <i class="bi bi-twitter"></i>
-                <small class="d-md-none ms-2"> </small>  
-            </li>
-
-            <li class="nav-item col-6 col-md-auto p-3">
-              <i class="bi bi-github"></i>
-              <small class="d-md-none ms-2"> </small> 
-            </li> 
-
-            <li class="nav-item col-6 col-md-auto p-3">
-              <i class="bi bi-whatsapp"></i>
-              <small class="d-md-none ms-2">WhatsApp</small>
-            </li>
-
-            <li class="nav-item col-6 col-md-auto p-3">
-              <i class="bi bi-facebook"></i>
-              <small class="d-md-none ms-2">Facebook</small>
-            </li>
-
-          </ul>-->
-              <!-- Right navbar links -->
-          <!-- LOGIN  -->
-          <ul class="navbar-nav ml-auto">
-              @guest 
-                  <a class="btn btn-outline-warning d-none d-md-inline-block " type="submit" href="{{ route('login') }}">{{ __('Login') }}</a>
-               
-              @if (Route::has('register'))
+            <!-- elementos del menu colapsable -->
+          <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav me-auto"> 
+            <li class="nav-header"></li>
+            @guest
+              
               <li class="nav-item">
-                  <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                <a class="nav-link active" aria-current="page" href="{{action('ServiciosPublicController@mostrar_Servicios')}}">Servicios</a>
               </li>
-              @endif
-              @else
-                  <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           {{ Auth::user()->name }}
-                      </a>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{action('FormacionPublicController@mostrar_Formaciones')}}">Formacion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{action('SocioPublicController@mostrar_Socios')}}">Socios</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{action('EventoPublicController@mostrar_Eventos')}}">Eventos</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{action('ProductoPublicController@mostrar_Productos')}}">Productos</a>
+              </li>
+            @else
+            <!--SEGUN PRIVILEGIO-->
+            <li class="nav-item">
+                <a class="nav-link active"  href="{{route('socios.index')}}" >Socios</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link active" href="{{route('eventos.index')}}">Eventos</a>
+              </li>
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Datos Informativos
+                </a>
 
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                          @can('admin-level')
-                              <a class="dropdown-item" href="{{route('admin.users.index')}}">Usuarios</a>
-                              <a class="dropdown-item"  href="{{route('home')}}">Pagina Principal</a>
-                          @endcan                                   
-                          <a class="dropdown-item" href="{{ route('logout') }}"
-                          onclick="event.preventDefault();
-                                          document.getElementById('logout-form').submit();">
-                              {{ __('Logout') }}
-                          </a>
-                          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                              @csrf
-                          </form>
-                      </div>
-                  </li>
+                <ul class="dropdown-menu  " aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{action('ServiciosPublicController@mostrar_Servicios')}}">Contato</a>
+                  <a class="dropdown-item" href="{{action('FormacionPublicController@mostrar_Formaciones')}}">Informacion</a>  
+                  <a class="dropdown-item" href="{{action('SocioPublicController@mostrar_Socios')}}">Blog</a> 
+                  <a class="dropdown-item" href="{{action('SocioPublicController@mostrar_Socios')}}">Mensajes</a> 
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Catálogo
+                </a>
+
+                <ul class="dropdown-menu  " aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{route('servicios.index')}}">Servicios</a>
+                  <a class="dropdown-item" href="{{route('formaciones.index')}}">Formaciones</a>  
+                  <a class="dropdown-item" href="{{route('productos.index')}}">Productos</a> 
+                </ul>
+              </li>
+              
+              @can('admin-level')
+              <li class="nav-item">
+                <a class="nav-link" href="#"> </a>
+              </li>
+              @endcan
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Públicos
+                </a>
+
+                <ul class="dropdown-menu  " aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{action('ServiciosPublicController@mostrar_Servicios')}}">Servicios</a>
+                  <a class="dropdown-item" href="{{action('FormacionPublicController@mostrar_Formaciones')}}">Formaciones</a>  
+                  <a class="dropdown-item" href="{{action('SocioPublicController@mostrar_Socios')}}">Socios</a>
+                  <a class="dropdown-item" href="{{action('EventoPublicController@mostrar_Eventos')}}">Eventos</a>
+                  <a class="dropdown-item" href="{{action('ProductoPublicController@mostrar_Productos')}}">Productos</a>
+                </ul>
+              </li>
               @endguest
-          </ul>
-          
-        </div>
-     
-        </div>  
-      </nav>
-      </section>
+            </ul>
+            <hr class="d-md-none text-white-50">
+            <!-- enlaces redes sociales -->
+            <ul class="navbar-nav  flex-row flex-wrap text-light">
+              <!-- 
+            <li class="nav-item col-6 col-md-auto p-3">
+                  <i class="bi bi-twitter"></i>
+                  <small class="d-md-none ms-2"> </small>  
+              </li>
+
+              <li class="nav-item col-6 col-md-auto p-3">
+                <i class="bi bi-github"></i>
+                <small class="d-md-none ms-2"> </small> 
+              </li> 
+
+              <li class="nav-item col-6 col-md-auto p-3">
+                <i class="bi bi-whatsapp"></i>
+                <small class="d-md-none ms-2">WhatsApp</small>
+              </li>
+
+              <li class="nav-item col-6 col-md-auto p-3">
+                <i class="bi bi-facebook"></i>
+                <small class="d-md-none ms-2">Facebook</small>
+              </li>
+
+            </ul>-->
+                <!-- Right navbar links -->
+            <!-- LOGIN  -->
+            <ul class="navbar-nav ml-auto">
+                @guest 
+                    <a class="btn btn-outline-warning d-none d-md-inline-block " type="submit" href="{{ route('login') }}">{{ __('Login') }}</a>
+                
+                @if (Route::has('register'))
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                </li>
+                @endif
+                @else
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ Auth::user()->name }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            @can('admin-level')
+                                <a class="dropdown-item" href="{{route('admin.users.index')}}">Usuarios</a>
+                                <a class="dropdown-item"  href="{{route('home')}}">Pagina Principal</a>
+                            @endcan                                   
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
+            </ul>
+            
+          </div>
+      
+          </div>  
+        </nav> 
       </header>
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
