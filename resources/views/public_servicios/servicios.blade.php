@@ -194,7 +194,7 @@ var alvaro='';
                     var des=$(this).data('des');
                     // var valor=$(this).data('des');
                     console.log(data);
-                    $('#des_'+data).html(des+`<br><a href="${data}" class="valor">Más info.</a>`);
+                    $('#des_'+data).html(des+`<br><br> <a href="${data}" class="valor">Más info.</a>`);
              });
              $('.close'+arr[vari]["ser_codigo"]).on('click',function(){
                     var data=$(this).data('alv');
