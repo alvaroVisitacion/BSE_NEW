@@ -65,6 +65,10 @@ class ServicioController extends Controller
 
     }
 
+    function comprar(Request $req,$value){
+        return $value;
+    }
+
     /**
      * Display the specified resource.
      *
