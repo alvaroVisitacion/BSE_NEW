@@ -147,9 +147,13 @@
          <h2><font color="black" size="6" style="font-family: Times New Roman" >SERVICIOS</font></h2>  
     </div>
     <div class="card-body">
+       
         <div class="container-card ">
             <div class="row contenido">
-        
+                {{-- <form method="GET" action="{{ route ('servicios.comprar')}}"   enctype="multipart/form-data">
+                    @csrf
+                
+                </form> --}}
             </div>
         </div>
     </div>
@@ -168,30 +172,29 @@ var alvaro='';
                
                     <div class="col-md-6">
                     <div class="card_">
-                        <div class="card-body ${arr[vari]["ser_codigo"]}" data-alv="${arr[vari]["ser_codigo"]}" data-des="${arr[vari]["ser_descripcion"]}"  >
+                        <div class="card-body ${arr[vari]["ser_codigo"]}" data-alv="${arr[vari]["ser_codigo"]}" data-des="${arr[vari]["ser_descripcion"]}">
+                            <input type="hidden">${arr[vari]["ser_codigo"]}</input>
                          <h5 class="card-title" style="height:40px">${arr[vari]["ser_titulo"]}</h5>
                         <figure>
                          <img class="card-img-top" src="/img/${arr[vari]["ser_imagen"]}" alt="Card image cap"  >
                          </figure>
                          <div class="card-body des" id="des_${arr[vari]["ser_codigo"]}">
                          
-                         <a class="close${arr[vari]["ser_codigo"]}">Ver mas</a>
+                         <a  class="close${arr[vari]["ser_codigo"]}">Ver mas</a>
                              
                          </div>
                      </div>
                 </div>
-                    </div>
- 
-                
-                     `);
+                    </div>`);
 
                 
                  
             $('.'+arr[vari]["ser_codigo"]).on('click',function(){
                     var data=$(this).data('alv');
                     var des=$(this).data('des');
+                    // var valor=$(this).data('des');
                     console.log(data);
-                    $('#des_'+data).html(des);
+                    $('#des_'+data).html(des+`<br><a href="${data}" class="valor">Más info.</a>`);
              });
              $('.close'+arr[vari]["ser_codigo"]).on('click',function(){
                     var data=$(this).data('alv');

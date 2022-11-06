@@ -50,6 +50,9 @@ Route::middleware('can:admin-level')->group(function(){
      
     Route::resource('servicios','ServicioController')->names('servicios'); 
     Route::get('change_status/servicio/{servicio}', 'ServicioController@change_status')->name('change.status.servicios');
+    Route::get('p_servicios/{servicio}', 'ServicioController@comprar')->name('servicios.comprar');
+
+
      
     Route::resource('productos','ProductoController')->names('productos'); 
     Route::get('change_status/producto/{producto}', 'ProductoController@change_status')->name('change.status.productos');
