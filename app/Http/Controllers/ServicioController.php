@@ -66,7 +66,12 @@ class ServicioController extends Controller
     }
 
     function comprar(Request $req,$value){
-        return $value;
+        
+        $data=DB::table('servicios')->where('ser_codigo','=',$value)->first();
+
+        return view('servicios.venta',compact('data'));
+
+        // return $value;
     }
 
     /**
