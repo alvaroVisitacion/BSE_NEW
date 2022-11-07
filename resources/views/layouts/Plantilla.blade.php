@@ -12,7 +12,7 @@
      
  
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{asset('adminlte/plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> 
   <!-- Tempusdominus Bbootstrap 4 -->
@@ -28,6 +28,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
   <style>
 
     body{
@@ -76,6 +77,22 @@
       .conteiner {
         padding-top: 80px;
       }
+
+      * {
+        font-family: Open Sans;
+      }
+.buy-now .btn-buy-now {
+  position: fixed;
+  bottom: 3rem;
+  right: 1.625rem;
+  z-index: 999999;
+
+  box-shadow: 0 1px 20px 1px #ff3e1d;
+}
+.buy-now .btn-buy-now:hover {
+  box-shadow: none;
+}
+
 
   </style>
 
@@ -142,9 +159,9 @@
                 </a>
 
                 <ul class="dropdown-menu  " aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{action('ServiciosPublicController@mostrar_Servicios')}}">Contato</a>
-                  <a class="dropdown-item" href="{{action('FormacionPublicController@mostrar_Formaciones')}}">Informacion</a>  
-                  <a class="dropdown-item" href="{{action('SocioPublicController@mostrar_Socios')}}">Blog</a> 
+                  <a class="dropdown-item" href="{{route('contactos.index')}}">Contacto</a>
+                  <a class="dropdown-item" href="{{route('datos.index')}}">Informacion</a>  
+                  <a class="dropdown-item" href="{{route('experiencias.index')}}">Blog</a> 
                   <a class="dropdown-item" href="{{action('SocioPublicController@mostrar_Socios')}}">Mensajes</a> 
                 </ul>
               </li>
@@ -253,14 +270,28 @@
               <div class="container-fluid">
 
                   @yield('contenido')
+                  
+
+    </div>
               </div><!-- /.container-fluid -->
           </section>
           <!-- /.content -->
       </div>
+   
 
  
   </body> 
-  
+
+ 
+
+    <div class="Botoncillo">
+        <div class="buy-now">
+            <a href="https://wa.me/51998685054/?text=Hola%20tengo%20una%20consulta%20:)">
+                <target="_blank" class="btn btn-danger btn-buy-now">Atencion al cliente
+            </a>
+        </div>
+    </div>
+
       <footer class="main-footer text-center">
           <strong>Copyright &copy; <a id="current_date"></a> <a href="#">Business Solution Enterprise S.A.C</a>.</strong><br>
           Todos los derechos reservados.

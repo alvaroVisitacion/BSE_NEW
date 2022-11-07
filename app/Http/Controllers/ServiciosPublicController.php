@@ -21,5 +21,13 @@ class ServiciosPublicController extends Controller
        // return view('public_servicios.servicios')->with('servicios',$servicios);
     }
 
+    function comprar(Request $req,$value){
+        
+        $data=DB::table('servicios')->where('ser_codigo','=',$value)->first();
+
+        return view('servicios.venta',compact('data'));
+
+        // return $value;
+    }
    
 }

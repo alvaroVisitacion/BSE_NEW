@@ -1,27 +1,25 @@
- 
- /*logo*/
- 
+/*logo*/
 
 /*Portada*/
-.container-portada{
+.container-portada {
     width: 100%;
     height: 500px;
     position: relative;
-    background-image:  url(../img/port.jpg); 
+    background-image: url(../img/port.jpg);
     background-size: 150%;
-    animation: movimiento 12s infinite linear alternate;  
+    animation: movimiento 12s infinite linear alternate;
 }
 
-@keyframes movimiento{
-    from{
+@keyframes movimiento {
+    from {
         background-position: bottom left;
-    }to{
+    }
+    to {
         background-position: top right;
     }
 }
 
-
-.capa-gradient{
+.capa-gradient {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -29,33 +27,29 @@
     opacity: 0.7;
 }
 
-.container-details{
+.container-details {
     width: 100%;
     max-width: 1200px;
     position: relative;
     margin: auto;
-    
 }
 
-
-.details{   
+.details {
     width: 100%;
     max-width: 900px;
     position: relative;
-    top: 90px;  
+    top: 90px;
 }
 
-.details h1{
-  
+.details h1 {
     font-size: 39px;
     font-weight: 750;
-    margin-left: 30px; 
-    margin-top: 11px; 
+    margin-left: 30px;
+    margin-top: 11px;
     color: rgb(226, 226, 241);
 }
 
-
-.details p{
+.details p {
     margin-top: 10px;
     font-size: 20px;
     font-weight: 100;
@@ -63,7 +57,7 @@
     color: rgb(189, 189, 230);
 }
 
-.details button{
+.details a {
     padding: 10px 20px;
     font-size: 16px;
     background: none;
@@ -76,32 +70,22 @@
     margin-left: 10px;
 }
 
-.details button:hover{
-    background: white;
+.details a:hover {
+    background: rgb(189, 189, 230);
     color: black;
 }
 
-
-
 /*CARRUSELL*/
-html,body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 200;
-    height: 100vh;
-    margin: 0;
-}
 
 h2 {
-    font-family: 'Helvetica', 'Verdana', 'Monaco', sans-serif;
-    color: #0155E5;
+    font-family: "Helvetica", "Verdana", "Monaco", sans-serif;
+    color: #0155e5;
     font-weight: 700;
 }
 
 h4 {
-    font-family: 'Helvetica', 'Verdana', 'Monaco', sans-serif;
-    color: #165A04;
+    font-family: "Helvetica", "Verdana", "Monaco", sans-serif;
+    color: #165a04;
 }
 
 .flex-center {
@@ -124,17 +108,16 @@ h4 {
     text-align: center;
 }
 
-
 .title {
     font-size: 84px;
 }
 
-.links>a {
+.links > a {
     color: #636b6f;
     padding: 0 25px;
     font-size: 13px;
     font-weight: 600;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -146,18 +129,17 @@ h4 {
 .m-b-md {
     margin-bottom: 30px;
 }
- 
-.container{
+
+.container {
     width: 70%;
     height: 500px;
-    position: relative; 
-    background-size: 150%; 
+    position: relative;
+    background-size: 150%;
 }
 
 .card-body {
-
     border-radius: 6px;
-    overflow: hidden; 
+    overflow: hidden;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     transition: all 400ms ease-out;
     cursor: default;
@@ -165,12 +147,10 @@ h4 {
 
 .card:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-
 }
 
 .card img {
     width: 30%;
-
 }
 
 .formulario {
@@ -187,28 +167,309 @@ h4 {
     color: white;
     height: top;
     width: 55px;
+}
+.formulario a {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: rgb(182, 193, 243);
+    border-style: none;
+    border-radius: 10px;
+    border: 1px solid rgb(3, 49, 255);
+    color: rgb(6, 8, 173);
     margin-top: 20px;
+    transition: background 300ms;
+    cursor: pointer;
+    margin-left: 10px;
 }
- 
-@media screen and (max-width: 500px){
-    .details h1{
+
+.formulario a:hover {
+    background: rgb(0, 135, 139);
+    color: rgb(2, 7, 34);
+}
+
+
+@media (max-width: 991px) {
+    .site-footer [class^="col-"] {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .site-footer {
+        padding-bottom: 0;
+    }
+    .site-footer .copyright-text,
+    .site-footer .social-icons {
+        text-align: center;
+    }
+}
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+.social-icons li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: #96a2b2;
+    font-weight: 700;
+    font-size: 13px;
+}
+.social-icons a {
+    background-color: #eceeef;
+    color: #818a91;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe;
+}
+.social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px;
+}
+.social-icons a.facebook:hover {
+    background-color: #3b5998;
+}
+.social-icons a.twitter:hover {
+    background-color: #00aced;
+}
+.social-icons a.linkedin:hover {
+    background-color: #007bb6;
+}
+.social-icons a.dribbble:hover {
+    background-color: #ea4c89;
+}
+
+.footer-distributed{
+    
+    background: linear-gradient(30deg, #2D9494, #020226); 
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 30px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 15%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+        text-align: center; 
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+@media (max-width: 767px) {
+    .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .details h1 {
         font-size: 25px;
         text-align: center;
-        
     }
-    .details p{
-        font-size: 15px;
-        text-align: center;
-        
-    } 
-    .formulario h2{
-        font-size: 25px;
-        text-align: center;
-    }
-    .formulario h4{
+    .details p {
         font-size: 15px;
         text-align: center;
     }
- 
+    .formulario {
+        height: 20px;
+        text-align: center;
+    }
+    .formulario h2 {
+        font-size: 10px;
+        text-align: center;
+    }
+    .formulario h4 {
+        font-size: 15px;
+        text-align: center;
+    }
 }
- 
+
+

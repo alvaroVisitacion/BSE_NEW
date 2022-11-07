@@ -117,7 +117,7 @@
             padding: 10px;
             margin-top: 10px;
             text-decoration: none;
-            color: #2fb4cc;
+            color: #C8FFE2;
             border: 1px solid #2fb4cc;
             border-radius: 4px;
             transition: all 400ms ease;
@@ -169,9 +169,9 @@
                         </div>
                     </div>
                     <div class="col-md-6" style="">
-                        <span>Si desea adquirir este servicio deberá llenar un formulario para confirmar sus datos y enviarle una cotizaión</span> <br>
-                        <button class="btn btn-success btn_formulario">Adquirir Servicio</button>
-                        <button class="btn btn-success">COSTO S%200</button>
+                        <span>Si desea adquirir este servicio deberá llenar un formulario para confirmar sus datos y voucher a la cuenta N° 76542312345123432</span> <br>
+                        <a class="btn btn-success btn_formulario">Adquirir Servicio</a>
+                        <lavel  >COSTO S/200</lavel>
                         <br>
                         <div class="formulario" style="background-color: #a7b8e9;
                         margin: 10px;
@@ -219,6 +219,14 @@
                                         <span class="text-danger font-size"></span>
                                     </div>
                                 </div>
+
+                                <br>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <a class="btn btn-success btn_formulario">ENVIAR</a>
+                                    </div>
+                                </div>
+                                 
                             </div>
                         </div>
                     </div>

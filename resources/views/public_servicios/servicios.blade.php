@@ -198,7 +198,7 @@
                          <div class="card-body des" id="des_${arr[vari]["ser_codigo"]}">
                          
                          <a  class="close${arr[vari]["ser_codigo"]}" alt="Ver más"><i class="fa-solid fa-circle-chevron-down"></i></a>
-                         <a href="p_servicios/${arr[vari]["ser_codigo"]}" class="valor">Más información</a>
+                        <br> <a href="p_servicios/${arr[vari]["ser_codigo"]}" class="valor">Más información</a>
                          </div>
                      </div>
                 </div>

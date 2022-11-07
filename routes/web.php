@@ -39,6 +39,8 @@ Route::get('/p_socios','SocioPublicController@mostrar_Socios');
 Route::get('/p_formaciones','FormacionPublicController@mostrar_Formaciones');
 Route::get('/p_productos','ProductoPublicController@mostrar_Productos');
 Route::get('/p_eventos','EventoPublicController@mostrar_Eventos');
+Route::get('/p_contactos','ContactoPublicController@mostrar_Contactos');
+Route::get('p_servicios/{servicio}', 'ServiciosPublicController@comprar')->name('servicios.comprar');
 
 
 Route::middleware('can:admin-level')->group(function(){ 
@@ -50,15 +52,27 @@ Route::middleware('can:admin-level')->group(function(){
      
     Route::resource('servicios','ServicioController')->names('servicios'); 
     Route::get('change_status/servicio/{servicio}', 'ServicioController@change_status')->name('change.status.servicios');
-    Route::get('p_servicios/{servicio}', 'ServicioController@comprar')->name('servicios.comprar');
-
 
      
     Route::resource('productos','ProductoController')->names('productos'); 
     Route::get('change_status/producto/{producto}', 'ProductoController@change_status')->name('change.status.productos');
      
+
     Route::resource('eventos','EventoController')->names('eventos'); 
     Route::get('change_status/evento/{evento}', 'EventoController@change_status')->name('change.status.eventos');
+  
+    //Modulo Informartivo   
+    Route::resource('contactos','ContactoController')->names('contactos'); 
+    Route::get('change_status/contacto/{contacto}', 'ContactoController@change_status')->name('change.status.contactos');
+   
+    Route::resource('correos','CorreoController')->names('correos'); 
+    Route::get('change_status/correo/{correo}', 'CorreoController@change_status')->name('change.status.correos');
+   
+    Route::resource('datos','DatoController')->names('datos'); 
+    Route::get('change_status/dato/{dato}', 'DatoController@change_status')->name('change.status.datos');
+   
+    Route::resource('experiencias','ExperienciaController')->names('experiencias'); 
+    Route::get('change_status/experiencia/{experiencia}', 'ExperienciaController@change_status')->name('change.status.experiencias');
      
 
 });
