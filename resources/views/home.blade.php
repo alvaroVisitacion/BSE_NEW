@@ -131,7 +131,7 @@
 
                     <a href="#">Blog</a>
 
-                    <a href="{{action('ContactoPublicController@mostrar_Contactos')}}"  role="button"> Contacto</a>
+                    <a href="{{action('CorreoPublicController@create')}}"  role="button"> Contacto</a>
 
                     <a href="{{action('ContactoPublicController@mostrar_Contactos')}}" role="button">Acerca</a> 
                 </p> 

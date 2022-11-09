@@ -40,6 +40,7 @@ Route::get('/p_formaciones','FormacionPublicController@mostrar_Formaciones');
 Route::get('/p_productos','ProductoPublicController@mostrar_Productos');
 Route::get('/p_eventos','EventoPublicController@mostrar_Eventos');
 Route::get('/p_contactos','ContactoPublicController@mostrar_Contactos');
+Route::GET('/p_correos','CorreoPublicController@create'); 
 Route::get('p_servicios/{servicio}', 'ServiciosPublicController@comprar')->name('servicios.comprar');
 
 
