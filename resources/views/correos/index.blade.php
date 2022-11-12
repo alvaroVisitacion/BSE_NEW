@@ -10,14 +10,11 @@
 </head>
 
 
-
-
 <div class="card"> <br><br>
 <br>
 <br><div class="pull-left"><h3>LISTA DE MENSAJES DE CONTACTO</h3><br>
     <div class="card-header">
         <div class="btn-group">
-            <a href="{{route('correos.create')}}" class="btn btn-success">Añadir</a><br>
         </div>
     </div>
     <div class="card-body">
@@ -29,8 +26,7 @@
                         <th>Correo</th> 
                         <th>Asunto</th> 
                         <th>Mensaje</th> 
-                         <th>Estado</th>  
-                        <th > </th>
+                         <th>Estado</th>   
                         <th >Opciones</th>
                     </tr>
                 </thead>
@@ -50,12 +46,10 @@
                         </td>
                         @else
                         <td>
-                            <a type="button" href="{{route('change.status.correos', $soc)}}" class="btn btn-sm btn-danger">No respondido</a>
+                            <a type="button" href="{{route('change.status.correos', $soc)}}" class="btn btn-sm btn-info">No respondido</a>
                         @endif
                         </td>
-                         
-                        <td>  <a class="btn btn-primary btn-xs" href="{{route('correos.edit', $soc->cor_codigo)}}" ><span class="glyphicon glyphicon-edit">Editar</span></a> </td>
-                         
+                          
                          <td>
                              <form action="{{action('CorreoController@destroy', $soc->cor_codigo)}}" method="post" class="formEliminar" >
                                  {{csrf_field()}}

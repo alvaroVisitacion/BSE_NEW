@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/fut.css">
  <style>
 
  </style>
@@ -23,6 +24,7 @@
             </div>
         </div>
     </div><br> <br>
+
 
      <div class="container">
         <div class="row ">
@@ -91,33 +93,27 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
+   <br> <br>
 
-   
-
-    <br> <br>
-
-        <!--   <div class="card-header">{{ __('Bienvenido!!!') }} </div>
-                    <h1><font color="black" size="7" style="font-family: Castellar" >BSE</font></h1> 
-                    <img src="{{asset('adminlte/dist/img/fondo01.jpg')}}" height="500" width="1125">   -->
-        <br><br>
-        <div class="container2 ">
-            <div class="row ">
-                <div class="col-md-12 ">
-                    <h2> socios estrategicos</h2>
+ 
+    <div class="container-portada2">
+        <div class="capa-gradient2"></div>
+        <div class="container-details2">
+            <div class="details2">
+                <p>NOS INVOLUCRAMOS</p>
+                <h2>JUNTOS LO HACEMOS</h2> 
+                <br>
+                <div class="mini">
                 </div>
+                <a   href="{{action('ExperienciaPublicController@mostrar_Equipo')}}"  role="button">Nuestro Equipo de Trabajo</a>
+
             </div>
         </div>
-        <div class="container3 ">
-            <div class="row ">
-                <div class="col-md-12 formulario">
-                    <h4> equipo de trabajo </h4>
-                </div>
-            </div>
-        </div>
-        <br><br>
+    </div><br> <br>
+ 
 
-                <footer class="footer-distributed">
+            <footer class="footer-distributed">
 
             <div class="footer-left">
 
@@ -127,9 +123,7 @@
                 </h3>
 
                 <p class="footer-links">
-                    <a href="#" class="link-1">Home</a>
-
-                    <a href="#">Blog</a>
+                    <a href="#" class="link-1">Home</a> 
 
                     <a href="{{action('CorreoPublicController@create')}}"  role="button"> Contacto</a>
 
@@ -172,7 +166,7 @@
 
             </div>
 
-        </footer>
+             </footer>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

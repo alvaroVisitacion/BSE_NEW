@@ -98,7 +98,7 @@
                     <div class="row justify-content-center" id="titulo">
                      </div>
                 </div> 
-                <br>
+                <br>  
                 <div class="col-5">
                     <div class="row justify-content-center" id="titulo">
                         <label for="">FECHA FINAL</label> 

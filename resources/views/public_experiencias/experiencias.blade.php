@@ -60,6 +60,7 @@
         width: 100%;
         /* display: flex; */
         max-width: 1000px;
+        height: 1000px;
         margin: auto;  
         background-image: url(../img/bod.jpg);
         background-repeat: no-repeat;
@@ -79,7 +80,8 @@
         color: #7a7a7a;
     }
     .card_{
-        width: 98%; 
+        width: 98%;  
+        height: 100%; 
         margin-top: 8%;
         margin-left: 1%;
         margin-right: 1%;
@@ -96,20 +98,32 @@
     }
     .card_ img{
         width: top;
-        height: 250px;
+        height: top; 
+        border-radius: 10px solid brown;
     }
     .card_ .contenido-card{
         padding: 15px;
         text-align: center;
     }
     .card_ .container-card h5{
-        margin-bottom: 15px;
-        color: #7a7a7a;
+        margin-bottom: 15px; 
+        color: #405FE9;
+        text-align: center;
+    }
+    .card_ .container-card h7{
+        margin-bottom: 15px; 
+        color: #12B5AF;
+        text-align: center;
+    }
+    .card_ .container-card h6{
+        margin-bottom: 15px; 
+        color: #030F47;
+        text-align: center;
     }
     .card_ .container-card p{
         line-height: 1.8;
         color: #6a6a6a;
-        font-size: 14px;
+        font-size: 30px;
         margin-bottom: 5px;
     }
     .card_ .container-card a{
@@ -143,7 +157,7 @@
 
 <div class="card_">
     <div class="tittle-cards">
-         <h2><font color="black" size="6" style="font-family: Times New Roman" >EVENTOS</font></h2>  
+         <h2><font color="black" size="6" style="font-family: Times New Roman" >EQUIPO DE TRABAJO</font></h2>  
     </div>
     <div class="card-body">
         <div class="container-card ">
@@ -157,7 +171,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
 <script>
              $('.des').hide();
-    var arr=<?php echo $eventos?>;
+    var arr=<?php echo $experiencias?>;
         $(document).ready(function(){
 
 
@@ -165,18 +179,32 @@
                 for(vari=0;vari<arr.length;vari++){
                     $('.contenido').append(` 
                 
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                     <div class="card_">
-                        <div class="card-body ${arr[vari]["eve_codigo"]}" data-alv="${arr[vari]["eve_codigo"]}" data-des="${arr[vari]["eve_descripcion"]}" data-ini="${arr[vari]["eve_fechaini"]}"  >
-                         <h5 class="card-title" style="height:40px">${arr[vari]["eve_titulo"]}</h5>
+                        <div class="card-body ${arr[vari]["exp_codigo"]}" data-alv="${arr[vari]["exp_nombre"]}" data-des="${arr[vari]["exp_profesion"]}" data-ini="${arr[vari]["exp_resumen"]}" data-in="${arr[vari]["exp_experiencia"]}" >
+                         <h5 class="card-title" style="height:30px">${arr[vari]["exp_nombre"]}</h5>
+                        <div class="row">
+                        <div class="col-md-3">
                         <figure>
-                         <img class="card-img-top" src="/img/${arr[vari]["eve_imagen"]}" alt="Card image cap"  >
+                         <img class="card-img-top" src="/img/${arr[vari]["exp_imagen"]}" alt="Card image cap"  >
                          </figure>
-                         <h6   style="height:10px">${arr[vari]["eve_fechaini"]}</h6>
-                         <div class="card-body des" id="des_${arr[vari]["eve_codigo"]}">
+                        </div>
+                        <div class="col-md-8">
+                            <div class"row">
+                                <h7">${arr[vari]["exp_profesion"]}</h7>
+                            </div> <br>
+                            <div class"row">
+                                <h6   ">${arr[vari]["exp_resumen"]}</h6>
+                            </div>
+                            <div class"row">
+                            <h6 "><spam>${arr[vari]["exp_experiencia"]} </spam></h6>
+                            </div>
+
+                         </div>
+                        </div>
+                        
                          
-                         <a class="close${arr[vari]["eve_codigo"]}">Ver mas</a>
-                             
+                               
                          </div>
                      </div>
                 </div>
@@ -187,13 +215,13 @@
 
                 
                  
-            $('.'+arr[vari]["eve_codigo"]).on('click',function(){
+            $('.'+arr[vari]["exp_codigo"]).on('click',function(){
                     var data=$(this).data('alv');
                     var des=$(this).data('des');
                     console.log(data);
                     $('#des_'+data).html(des);
              });
-             $('.close'+arr[vari]["eve_codigo"]).on('click',function(){
+             $('.close'+arr[vari]["exp_codigo"]).on('click',function(){
                     var data=$(this).data('alv');
                     $('#des_'+data).hide();
              });

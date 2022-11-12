@@ -150,19 +150,17 @@
             <li class="nav-item">
                 <a class="nav-link active"  href="{{route('socios.index')}}" >Socios</a>
               </li> 
-              <li class="nav-item">
-                <a class="nav-link active" href="{{route('eventos.index')}}">Eventos</a>
-              </li>
+              
              <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Datos Informativos
                 </a>
 
                 <ul class="dropdown-menu  " aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('contactos.index')}}">Contacto</a>
+                  <a class="dropdown-item" href="{{route('contactos.index')}}">Empresa</a>
                   <a class="dropdown-item" href="{{route('datos.index')}}">Informacion</a>  
-                  <a class="dropdown-item" href="{{route('experiencias.index')}}">Blog</a> 
-                  <a class="dropdown-item" href="{{action('SocioPublicController@mostrar_Socios')}}">Mensajes</a> 
+                  <a class="dropdown-item" href="{{route('experiencias.index')}}">Equipo de Trabajo</a> 
+                  <a class="dropdown-item" href="{{route('correos.index')}}">Contacto</a> 
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -174,6 +172,7 @@
                   <a class="dropdown-item" href="{{route('servicios.index')}}">Servicios</a>
                   <a class="dropdown-item" href="{{route('formaciones.index')}}">Formaciones</a>  
                   <a class="dropdown-item" href="{{route('productos.index')}}">Productos</a> 
+                <a class="dropdown-item" href="{{route('eventos.index')}}">Eventos</a>
                 </ul>
               </li>
               
@@ -192,7 +191,9 @@
                   <a class="dropdown-item" href="{{action('FormacionPublicController@mostrar_Formaciones')}}">Formaciones</a>  
                   <a class="dropdown-item" href="{{action('SocioPublicController@mostrar_Socios')}}">Socios</a>
                   <a class="dropdown-item" href="{{action('EventoPublicController@mostrar_Eventos')}}">Eventos</a>
-                  <a class="dropdown-item" href="{{action('ProductoPublicController@mostrar_Productos')}}">Productos</a>
+                  <a class="dropdown-item" href="{{action('ContactoPublicController@mostrar_Contactos')}}">Empresa</a>   
+                  <a class="dropdown-item" href="{{action('ContactoPublicController@mostrar_Contactos')}}">Equipo de Trabajo</a> 
+                  <a class="dropdown-item" href="{{route('corre.create')}}">Contacto</a>  
                 </ul>
               </li>
               @endguest
@@ -272,7 +273,6 @@
                   @yield('contenido')
                   
 
-    </div>
               </div><!-- /.container-fluid -->
           </section>
           <!-- /.content -->

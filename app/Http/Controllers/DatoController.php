@@ -50,6 +50,7 @@ use Illuminate\Http\Request;
                     'dat_ubicacion' => 'required',
                     'dat_correo' => 'required',
                     'dat_telefono' => 'required'
+                    
                 ]);
                 $datos = $request->all();
 

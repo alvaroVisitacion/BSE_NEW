@@ -107,7 +107,7 @@
     }
     .card_ .container-card h5{
         margin-bottom: 15px;
-        color: #7a7a7a;
+        color: #0027A2;
     }
     .card_ .container-card p{
         line-height: 1.8;
@@ -173,8 +173,8 @@ var alvaro='';
                         <div class="card_">
                             <div class="card-body ${arr[vari][" con_codigo"]}" data-alv="${arr[vari][" con_codigo"]}" data-som="${arr[vari]["con_somos"]}">
                                 <h5 class="card-title" style="height:40px">¿QUIÉNES SOMOS?</h5>
-                                <figure>
-                                    <img class="card-img-top" src="" alt="Card image cap">
+                                <figure>  
+                                    <img class="card-img-top" src="{{asset('adminlte/dist/img/mis.jpg')}}" alt="Card image cap" style="border:0; width:top; height:top">
                                 </figure>
                                 <div class="card-body des">
                                     <h6 style="height:10px">${arr[vari]["con_somos"]}</h6>
@@ -187,7 +187,7 @@ var alvaro='';
                                 <div class="card-body ${arr[vari][" con_codigo"]}" data-alv="${arr[vari][" con_codigo"]}" data-mis="${arr[vari][" con_mision"]}">
                                     <h5 class="card-title" style="height:40px">MISIÓN</h5>
                                     <figure>
-                                        <img class="card-img-top" src="" alt="Card image cap">
+                                         <img class="card-img-top" src="{{asset('adminlte/dist/img/mision.jpg')}}" alt="Card image cap" style="border:0; width:top; height:top">
                                     </figure>
                                     <div class="card-body des">
                                         <h6 style="height:10px">${arr[vari]["con_mision"]}</h6>
@@ -200,7 +200,7 @@ var alvaro='';
                                     <div class="card-body ${arr[vari][" con_codigo"]}" data-alv="${arr[vari][" con_codigo"]}" data-vis="${arr[vari][" con_vision"]}">
                                         <h5 class="card-title" style="height:40px">VISIÓN</h5>
                                         <figure>
-                                            <img class="card-img-top" src="" alt="Card image cap">
+                                            <img class="card-img-top" src="{{asset('adminlte/dist/img/vision.jpg')}}" alt="Card image cap" style="border:0; width:top; height:top">
                                         </figure>
 
                                         <div class="card-body des">

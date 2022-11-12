@@ -24,7 +24,17 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::all();
+        
         return view('home');
     }
-    
+    public function mostrar_Datos(){
+
+        $datos=DB::table('datos')->where('dat_estado','1')->get();
+
+        // var_dump($datos);exit();
+        return view('home',compact('datos'));
+
+    //    return view('public_servicios.servicios')->with('datos',$datos);
+    }
+
 }

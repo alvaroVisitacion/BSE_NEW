@@ -27,7 +27,7 @@ class CorreoPublicController extends Controller
  * @return \Illuminate\Http\Response
  */
 //public function store(Request $request)
-    protected function dadd(array $data)
+    protected function store(array $data)
     {
         return Validator::make($data,[
             'cor_nombre'=>['required', 'string','max:100'],
@@ -50,54 +50,33 @@ class CorreoPublicController extends Controller
         
     }
 
-  
+ 
+
+    protected function create(array $data)
+    {
+        //
+        return Correo::create([
+            'cor_nombre'=> $data['cor_nombre'],
+            'cor_correo'=> $data['cor_correo'],
+            'cor_mensaje'=> $data['cor_mensaje'],
+            'cor_asunto'=> $data['cor_asunto'],
+        ]);  
+    }
     //
     //$request->validate([
-        public function create()
-        {
-            //
-            $correo= Correo::all();   
-            return view('correos.create');
-        }
+  
     
-        public function store(Request $request)
-        {
-            //
-            $request->validate([
-                'cor_nombre'=>['required', 'string','max:100'],
-                'cor_correo'=>['required', 'string','email','max:100'],
-                'cor_mensaje'=>['required', 'string','max:500'], 
-                'cor_asunto'=>['required', 'string','max:100'],  
-                'g-recaptcha-response'=>['required','string',function($attribute,$value,$fail){
-                    $secretKey='6Le9eugiAAAAALqSPup_APeQot9dVCOYV1KI2GzX'; 
-                    $response=$value;
-                    $userIP = $_SERVER['REMOTE_ADDR'];
-                    $url ="https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$response&remoteip=$userIP";
-                    $response =\file_get_contents($url);
-                    $response = json_decode($response);
-                    if(!$response->success){
-                        Session::flash('g-recaptcha-response','porfavor marque el recaptcha');
-                        Session::flash('alert-class','alert-danger');
-                        $fail($attribute.'google reCatpcha failed');
-                    }
-                }],    
-    
-            ]);
-            $correos = $request->all();
-            Correo::create($correos);
-            sleep(3); 
-            return redirect()->route('home');
-    
-        }
-    
-
     
         /**
          * Get the guard to be used during registration.
          *
          * @return \Illuminate\Contracts\Auth\StatefulGuard
          */
- 
+        protected function guard()
+        {
+            return Auth::guard();
+        }
+    
      
 } 
 

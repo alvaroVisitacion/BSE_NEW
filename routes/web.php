@@ -14,14 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
+    
     return view('home');
 });
 
  
 
-Auth::routes(); 
-Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();   
 
+Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home','DatoPublicController@mostrar_Datos');
  
 
 Route::get('cancelar',function(){
@@ -34,15 +37,17 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 Route::resource('/users', 'UsersController',['except'=>['show','create','store']]);
 });
 //Paginas publicas
-Route::get('/p_servicios','ServiciosPublicController@mostrar_Servicios');
+Route::get('/p_servicios','ServiciosPublicController@mostrar_Servicios')->name('listaServicios');
 Route::get('/p_socios','SocioPublicController@mostrar_Socios');
 Route::get('/p_formaciones','FormacionPublicController@mostrar_Formaciones');
 Route::get('/p_productos','ProductoPublicController@mostrar_Productos');
 Route::get('/p_eventos','EventoPublicController@mostrar_Eventos');
-Route::get('/p_contactos','ContactoPublicController@mostrar_Contactos');
-Route::GET('/p_correos','CorreoPublicController@create'); 
-Route::get('p_servicios/{servicio}', 'ServiciosPublicController@comprar')->name('servicios.comprar');
-
+Route::get('/p_equipo','ExperienciaPublicController@mostrar_Equipo');
+Route::get('/foot','DatoPublicController@mostrar_Datos');
+Route::get('/p_contactos','ContactoPublicController@mostrar_Contactos'); 
+Route::resource('/p_correos','CorreoPublicController',['except'=>['show','index','destroy']])->names('corre'); 
+Route::get('p_servicios/{servicio}', 'ServiciosPublicController@comprar_servicio')->name('servicios.comprar');
+Route::post('p_servicios/store_venta', 'ServiciosPublicController@store_venta')->name('ventas.store');
 
 Route::middleware('can:admin-level')->group(function(){ 
     Route::resource('socios','SocioController')->names('socios'); 

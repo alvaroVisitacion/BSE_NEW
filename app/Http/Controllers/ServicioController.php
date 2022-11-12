@@ -22,10 +22,10 @@ class ServicioController extends Controller
         //
         $servicios= Servicio::all();
         return view('servicios.index')->with('servicios',$servicios);
-      
+
     }
 
-  
+
     /**
      * Show the form for creating a new resource.
      *
@@ -34,7 +34,7 @@ class ServicioController extends Controller
     public function create()
     {
         //
-        $servicio= Servicio::all(); 
+        $servicio= Servicio::all();
         return view('servicios.create');
     }
 
@@ -48,7 +48,7 @@ class ServicioController extends Controller
     {
         //
         $request->validate([
-            'ser_titulo'=>'required', 
+            'ser_titulo'=>'required',
             'ser_descripcion'=>'required',
             'ser_imagen'=>'required|image|mimes:jpeg,png,jpg,svg,webp|max:1024'
         ]);
@@ -65,26 +65,7 @@ class ServicioController extends Controller
 
     }
 
-    function comprar(Request $req,$value){
-        
-        $data=DB::table('servicios')->where('ser_codigo','=',$value)->first();
-
-        return view('servicios.venta',compact('data'));
-
-        // return $value;
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Servicio $servicio)
-    {
-        //
-    }
-
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -108,8 +89,8 @@ class ServicioController extends Controller
     {
         //
         $request->validate([
-            'ser_titulo'=>'required', 
-            'ser_descripcion'=>'required' 
+            'ser_titulo'=>'required',
+            'ser_descripcion'=>'required'
         ]);
         $ser=$request->all();
         if($imagen= $request->file('ser_imagen')){
@@ -131,15 +112,17 @@ class ServicioController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function destroy($ser_codigo)  
+    public function destroy($ser_codigo)
     {
         //
-        Servicio::find($ser_codigo)->delete();  
+        Servicio::find($ser_codigo)->delete();
         return redirect()->route('servicios.index');
 
     }
-   
-        public function change_status(Servicio $servicio){ 
+
+ 
+
+        public function change_status(Servicio $servicio){
             if ($servicio->ser_estado== 1) {
                 $servicio->update(['ser_estado'=>0]);
                 return redirect()->back();
@@ -147,5 +130,5 @@ class ServicioController extends Controller
                 $servicio->update(['ser_estado'=>1]);
                 return redirect()->back();
             }
-        }  
+        }
 }
