@@ -83,6 +83,13 @@
                         <label for="">DESCRIPCION</label> 
                         <input  type="text" id="for_descripcion" style="width:500px;height:100px"   value="{{$formacione->for_descripcion}}" name="for_descripcion" rows="3" class=" form-control" placeholder="descripcion"></input>                   
                     </div>
+                </div> 
+
+                <div class="col-md-12">
+                    <div class="row justify-content-center" id="titulo">
+                        <label for="">DESCRIPCION</label> 
+                        <input  type="text" id="for_beneficio" style="width:500px;height:100px"   value="{{$formacione->for_beneficio}}" name="for_beneficio" rows="3" class=" form-control" placeholder="beneficio"></input>                   
+                    </div>
                 </div>   
                 <br><br>   
 

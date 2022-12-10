@@ -1,4 +1,43 @@
 /*logo*/
+/*slider*/
+.container-slider {
+    width: top;
+    height: top;
+    position: relative;
+    background-size: 100%;
+    background: -webkit-linear-gradient(80deg, #02204B, #0e5168);
+
+}
+.opar{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-size: 150%;
+    opacity: 0.8;
+}
+
+.capa-slider {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.2;
+}
+.form h1{
+    font-size: 50px;
+    font-weight: 550;
+    margin-left: 30px;
+    -webkit-text-fill-color: rgb(255, 255, 255) ;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+.form p{
+    font-size: 25px;
+    font-weight: 750;
+    margin-left: 30px;
+    margin-top: 11px;
+    -webkit-text-fill-color:white;
+    -webkit-text-stroke: 1px  rgb(0, 34, 73);
+
+}
 
 /*Portada*/
 .container-portada {
@@ -47,7 +86,8 @@
     font-weight: 750;
     margin-left: 30px;
     margin-top: 11px;
-    color: rgb(226, 226, 241);
+    -webkit-text-fill-color: rgb(255, 255, 255) ;
+    -webkit-text-stroke: 2px rgb(238, 248, 255);
 }
 
 .details p {
@@ -82,9 +122,13 @@
     height: 400px;
     position: relative;
     background-image: url(../img/equipo2.jpg);
-    background-size: 150%; 
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
- 
+
+
 .capa-gradient2 {
     width: 100%;
     height: 100%;
@@ -119,7 +163,8 @@
     font-weight: 750;
     margin-left: 30px;
     margin-top: 11px;
-    color: rgb(226, 226, 241);
+    -webkit-text-fill-color: rgb(255, 255, 255) ;
+    -webkit-text-stroke: 2px rgb(248, 248, 248);
 }
 
 .details2 p {
@@ -148,7 +193,83 @@
     color: black;
 }
 
+/*Ubbicanos*/
+.container-portada4 {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-image: url(../img/ubicanos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.capa-gradient4 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left, black, #011629);
+    opacity: 0.8;
+}
+
+.container-details4 {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+.details4 {
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    top: 90px;
+}
+
+.details4 h1 {
+    font-size: 39px;
+    font-weight: 750;
+    margin-left: 30px;
+    margin-top: 11px;
+    color: rgb(226, 226, 241);
+}
+.details4 h2 {
+    font-size: 45px;
+    font-weight: 750;
+    margin-left: 30px;
+    margin-top: 11px;
+    -webkit-text-fill-color: rgb(255, 255, 255) ;
+    -webkit-text-stroke: 2px rgb(255, 251, 251);
+}
+
+.details4 p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+    color: rgb(189, 189, 230);
+}
+
+.details4 a {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: none;
+    border-style: none;
+    border: 1px solid white;
+    color: white;
+    margin-top: 20px;
+    transition: background 300ms;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.details4 a:hover {
+    background: rgb(189, 189, 230);
+    color: black;
+}
+
 /*CARRUSELL*/
+
 
 h2 {
     font-family: "Helvetica", "Verdana", "Monaco", sans-serif;
@@ -185,15 +306,7 @@ h4 {
     font-size: 84px;
 }
 
-.links > a {
-    color: #636b6f;
-    padding: 0 25px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
+
 
 .d-block {
     opacity: 1;
@@ -204,9 +317,10 @@ h4 {
 }
 
 .container {
-    width: 65%; 
-    position: relative; 
+    width: 65%;
+    position: relative;
 }
+
 
 .card-body {
     border-radius: 6px;
@@ -222,15 +336,30 @@ h4 {
 
 .card img {
     width: 30%;
+    opacity: 0.7;
+
 }
 
-.formulario {
-    background: rgba(229, 233, 218, 0.548);
-    padding: 5px;
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(0, 0, 123, 0.568);
-    color: white;
+
+.form a{
+    padding: 5px 10px;
+    font-size: 25px;
+    background: rgb(23, 63, 240);
+    border-style: none;
+    font-weight: 750;
+    border-radius: 10px;
+    border: 3px solid rgba(1, 12, 58, 0.425);
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    transition: background 300ms;
+    cursor: pointer;
 }
+
+.form a:hover {
+    background: rgb(15, 219, 226);
+    color: rgb(2, 7, 34);
+}
+
 
 .opa {
     background: rgba(229, 233, 218, 0.548);
@@ -239,98 +368,113 @@ h4 {
     height: top;
     width: 10px;
 }
-.formulario a {
-    padding: 10px 20px;
-    font-size: 16px;
-    background: rgb(182, 193, 243);
-    border-style: none;
-    border-radius: 10px;
-    border: 1px solid rgb(3, 49, 255);
-    color: rgb(6, 8, 173);
-    margin-top: 20px;
-    transition: background 300ms;
-    cursor: pointer;
-    margin-left: 10px;
+.details3 h1 {
+    font-size: 65px;
+    font-weight: 750;
+    margin-left: 30px;
+    margin-top: 11px;
+    -webkit-text-fill-color: rgb(255, 255, 255) ;
+    -webkit-text-stroke: 2px rgb(253, 253, 253);
 }
 
-.formulario a:hover {
-    background: rgb(0, 135, 139);
-    color: rgb(2, 7, 34);
-}
 
-@media screen and (max-width: 650px) {
-    .container {
-        width: 100%; 
-        position: relative; 
+@media only screen and (min-width:250px) and (max-width:768px) {
+    .form h1{
+        font-size: 30px;
+        font-weight: 550;
+        margin-left: 10px;
+        -webkit-text-fill-color: rgb(255, 255, 255) ;
+        -webkit-text-stroke: 1px rgb(167, 167, 167);
     }
-    
-    .details h1 {
-        font-size: 25px;
-        text-align: center;
+    .form p{
+        font-size: 20px;
+        font-weight: 550;
+        margin-left: 10px;
+        -webkit-text-fill-color: rgb(255, 255, 255) ;
+        -webkit-text-stroke: 1px rgb(16, 0, 245);
     }
-    .details p {
-        font-size: 15px;
-        text-align: center;
-    }
-    .formulario {
-        height: 20px;
-        text-align: center;
-    }
-    .formulario h2 {
-        font-size: 10px;
-        text-align: center;
-    }
-    .formulario h4 {
-        font-size: 15px;
-        text-align: center;
-    }
-} 
-
-@media (max-width: 880px) {
-
-	.footer-distributed{
-		font: bold 14px sans-serif;
-	}
-
-	.footer-distributed .footer-left,
-	.footer-distributed .footer-center,
-	.footer-distributed .footer-right{
-		display: block;
-		width: 100%;
-		margin-bottom: 40px;
-        text-align: center; 
-	}
-
-	.footer-distributed .footer-center i{
-		margin-left: 0;
-    }
-    .container {
-        width: 100%; 
-        position: relative; 
+  .form a{
+        padding: 5px 10px;
+        font-size: 12px;
+        background: rgb(23, 63, 240);
+        border-style: none;
+        font-weight: 750;
+        border-radius: 10px;
+        border: 3px solid rgba(1, 12, 58, 0.425);
+        color: rgb(255, 255, 255);
+        margin-top: 10px;
+        transition: background 300ms;
+        cursor: pointer;
     }
     .details h1 {
-        font-size: 25px;
-        text-align: center;
+        font-size: 23px;
+        font-weight: 750;
+        margin-left: 18px;
+        margin-top: 11px;
+        -webkit-text-fill-color: rgb(255, 255, 255) ;
+        -webkit-text-stroke: 2px rgb(238, 248, 255);
     }
     .details p {
+        margin-top: 10px;
         font-size: 15px;
-        text-align: center;
+        font-weight: 100;
+        margin-left: 10px;
+        color: rgb(189, 189, 230);
     }
-    .formulario {
-        height: 20px;
-        text-align: center;
-    }
-    .formulario h2 {
-        font-size: 10px;
-        text-align: center;
-    }
-    .formulario h4 {
-        font-size: 15px;
-        text-align: center;
-    }
-}
 
-@media (max-width: 767px) {
+    .details2 p {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 100;
+        margin-left: 10px;
+        color: rgb(189, 189, 230);
+    }
+    .details2 a {
+        padding: 10px 20px;
+        font-size: 11px;
+        background: none;
+        border-style: none;
+        border: 1px solid white;
+        color: white;
+        margin-top: 20px;
+        transition: background 300ms;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .details2 a:hover {
+        background: rgb(189, 189, 230);
+        color: black;
+    }
+    .details2 h2 {
+        font-size: 35px;
+        font-weight: 750;
+        margin-left: 30px;
+        margin-top: 11px;
+        -webkit-text-fill-color: rgb(255, 255, 255) ;
+        -webkit-text-stroke: 2px rgb(248, 248, 248);
+    }
+
+
+
+    .details3 h1 {
+        font-size: 25px;
+        font-weight: 750;
+        margin-left: 30px;
+        margin-top: 11px;
+        color: rgb(226, 226, 241);
+    }
+    .details4 h2 {
+        font-size: 27px;
+        font-weight: 750;
+        margin-left: 25px;
+        margin-top: 11px;
+        color: rgb(226, 226, 241);
+    }
+    .fot img{
+        width:200px;
+    }
+
     .social-icons li.title {
         display: block;
         margin-right: 0;
@@ -344,9 +488,35 @@ h4 {
         text-align: center;
     }
     .container {
-        width: 100%; 
-        position: relative; 
+        width: 100%;
+        position: relative;
     }
+}
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+        text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+    }
+    .container {
+        width: 100%;
+        position: relative;
+    }
+
+
 }
 
 @media (max-width: 991px) {
@@ -354,55 +524,18 @@ h4 {
         margin-bottom: 30px;
     }
     .container {
-        width: 100%; 
-        position: relative; 
+        width: 100%;
+        position: relative;
     }
-    .details h1 {
-        font-size: 25px;
-        text-align: center;
-    }
-    .details p {
-        font-size: 15px;
-        text-align: center;
-    }
-    .formulario {
-        height: 20px;
-        text-align: center;
-    }
-    .formulario h2 {
-        font-size: 10px;
-        text-align: center;
-    }
-    .formulario h4 {
-        font-size: 15px;
-        text-align: center;
-    }
-    
+
+
 }
 @media (max-width: 1200px) {
     .container {
-        width: 80%; 
-        position: relative; 
+        width: 80%;
+        position: relative;
     }
-    .details h1 {
-        font-size: 35px;
-        text-align: center;
-    }
-    .details p {
-        font-size: 25px;
-        text-align: center;
-    }
-    .formulario {
-        height: 30px;
-        text-align: center;
-    }
-    .formulario h2 {
-        font-size: 15px;
-        text-align: center;
-    }
-    .formulario h4 {
-        font-size: 20px;
-        text-align: center;
-    }
-    
-} 
+
+
+
+}

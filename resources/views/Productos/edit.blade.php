@@ -83,6 +83,12 @@
                         <label for="">DESCRIPCION</label> 
                         <input  type="text" id="pro_descripcion" style="width:500px;height:100px"   value="{{$producto->pro_descripcion}}" name="pro_descripcion" rows="3" class=" form-control" placeholder="descripcion"></input>                   
                     </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row justify-content-center" id="titulo">
+                        <label for="">BENEFICIO</label> 
+                        <input  type="text" id="pro_beneficio" style="width:500px;height:100px"   value="{{$producto->pro_beneficio}}" name="pro_beneficio" rows="3" class=" form-control" placeholder="descripcion"></input>                   
+                    </div>
                 </div>   
                 <br><br>   
 

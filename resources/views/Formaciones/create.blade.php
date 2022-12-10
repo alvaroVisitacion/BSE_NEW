@@ -86,6 +86,12 @@
                          <textarea id="for_descripcion" name="for_descripcion" rows="3" class=" form-control col-md-7" placeholder="descripcion"></textarea>
                     </div>
                 </div>   
+                <div class="col-md-12">
+                    <div class="row justify-content-center" id="titulo">
+                        <label for="">BENEFICIOS</label> 
+                         <textarea id="for_beneficio" name="for_beneficio" rows="3" class=" form-control col-md-7" placeholder="beneficio"></textarea>
+                    </div>
+                </div>
                 <br><br>
                  <div class="col-md-12">
                     <div class="row justify-content-center" id="titulo">

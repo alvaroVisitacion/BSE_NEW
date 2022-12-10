@@ -83,6 +83,12 @@
                         <label for="">DESCRIPCION</label> 
                         <input  type="text" id="eve_descripcion" style="width:500px;height:100px"   value="{{$evento->eve_descripcion}}" name="eve_descripcion" rows="3" class=" form-control" placeholder="descripcion"></input>                   
                     </div>
+                </div> 
+                <div class="col-md-12">
+                    <div class="row justify-content-center" id="titulo">
+                        <label for="">EVENTO</label> 
+                        <input  type="text" id="eve_beneficio" style="width:500px;height:100px"   value="{{$evento->eve_beneficio}}" name="eve_beneficio" rows="3" class=" form-control" placeholder="descripcion"></input>                   
+                    </div>
                 </div>   
                 <br>
                 <div class="row">

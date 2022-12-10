@@ -24,20 +24,14 @@ class UsersTableSeeder extends Seeder
             'name'     => 'Elizabeth Castillo Sanchez',
             'email'    => 'admin@admin.com',
             'password' => Hash::make('adminadmin')
-        ]);
-        $usuario = User::create([
+        ]); 
+        $user = User::create([
             'name'     => 'Jose Reyes Garcia',
-            'email'    => 'usuario@usuario.com',
+            'email'    => 'user@user.com',
             'password' => Hash::make('contraseña')
         ]);
-        $user = User::create([
-            'name'     => 'Generic User',
-            'email'    => 'user@user.com',
-            'password' => Hash::make('password')
-        ]);
 
-        $admin->roles()->attach($adminRole);
-        $usuario->roles()->attach($usuarioRole);
+        $admin->roles()->attach($adminRole); 
         $user->roles()->attach($userRole);
     }
 }

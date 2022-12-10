@@ -27,6 +27,7 @@
                         <th>N°</th>
                         <th>Titulo</th>
                         <th>Descripcion</th> 
+                        <th>Beneficio</th> 
                          <th>Estado</th>  
                         <th > </th>
                         <th >Opciones</th>
@@ -39,6 +40,7 @@
                         <td>{{$ser_codigo}}</td>
                         <td>{{$ser->ser_titulo}}</td>
                         <td>{{$ser->ser_descripcion}}</td> 
+                        <td>{{$ser->ser_beneficio}}</td> 
                         @if($ser->ser_estado==1)
                         <td>
                             <a type="button" href="{{route('change.status.servicios', $ser)}}" 

@@ -27,6 +27,7 @@
                         <th>N°</th>
                         <th>Titulo</th>
                         <th>Descripcion</th> 
+                        <th>Beneficios</th> 
                          <th>Estado</th>  
                         <th > </th>
                         <th >Opciones</th>
@@ -39,6 +40,7 @@
                         <td>{{$pro_codigo}}</td>
                         <td>{{$pro->pro_titulo}}</td>
                         <td>{{$pro->pro_descripcion}}</td> 
+                        <td>{{$pro->pro_beneficio}}</td> 
                         @if($pro->pro_estado==1)
                         <td>
                             <a type="button" href="{{route('change.status.productos', $pro)}}" 

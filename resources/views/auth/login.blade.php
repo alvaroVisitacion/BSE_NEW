@@ -1,6 +1,6 @@
 @extends('layouts.Plantilla')
 
-@section('contenido') <br>
+@section('contenido') <br>  
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,12 +19,13 @@
             <div class="col-md-6 col-sm-8 col-xl-4 col-lg-5 formulario">
                  
                 <form class="login100-form validate-form" method="POST" action="{{route('login')}}">
-				@csrf &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				    @csrf &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <span class="login100-form-avatar" >
                             <img src="{{asset('PLogin/images/login02.png')}}" alt="AVATAR"  height="80px"  >
                     </span> 
                     <div class="form-group mx-sm-4 pt-3" data-validate = "E-Mail Address">
+                        <label for="name" style="color:black" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
                         <input  class="form-control" @error('email') is-invalid @enderror" id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email"  placeholder="Ingrese su Correo" autofocus>
                             	@error('email')
                             	<span class="invalid-feedback" role="alert">
@@ -34,6 +35,7 @@
 
                   </div>
                     <div class="form-group mx-sm-4 pb-3" >
+                        <label for="name" style="color:black" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
                         <input  class="form-control texto" @error('password') is-invalid @enderror" id="password" type="password" name="password" required autocomplete="current-password" placeholder="Ingrese su Contraseña">
                         @error('password')
 							<span class="invalid-feedback" role="alert">

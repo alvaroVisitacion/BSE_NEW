@@ -16,4 +16,15 @@ class ProductoPublicController extends Controller
        // return view('public_servicios.servicios')->with('servicios',$servicios);
     }
 
+    function comprar_producto(Request $req,$value){
+
+        $data=DB::table('productos')->where('pro_codigo','=',$value)->first();
+        $data->tipo=2;// es un producto
+        // var_dump($data);
+
+        return view('productos.venta',compact('data'));
+
+        // return $value;
+    }
+
 }

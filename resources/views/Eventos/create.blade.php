@@ -85,6 +85,12 @@
                         <label for="">DESCRIPCION</label> 
                          <textarea id="eve_descripcion" name="eve_descripcion" rows="3" class=" form-control col-md-7" placeholder="descripcion"></textarea>
                     </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row justify-content-center" id="titulo">
+                        <label for="">BENEFICIOS</label> 
+                         <textarea id="eve_beneficio" name="eve_beneficio" rows="3" class=" form-control col-md-7" placeholder="beneficio"></textarea>
+                    </div>
                 </div> 
                 <br>
                 <div class="row">

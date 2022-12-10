@@ -30,7 +30,11 @@ body {
 .form-control::placeholder {
     color: white;
 }
+.p{
+    font-size: 10px; 
+   color: rgb(3, 3, 65);
 
+}
 
 
 .ingresar {
@@ -81,7 +85,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     background: rgba(0, 0, 0, .5);
-}
+}  
 
 .olvide1:hover {
     color: white;

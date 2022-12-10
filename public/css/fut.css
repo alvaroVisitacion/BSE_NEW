@@ -6,7 +6,7 @@
  
 
 .footer-distributed{
-	background: linear-gradient(30deg, #2D9494, #020226); 
+	background:  linear-gradient(#076286,#00C1FF);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -43,7 +43,7 @@
 /* Footer links */
 
 .footer-distributed .footer-links{
-	color:  #ffffff;
+	color:  #fff8ff;
 	margin: 20px 0 12px;
 	padding: 0;
 }
@@ -103,8 +103,8 @@
 }
 
 .footer-distributed .footer-center p a{
-	color:  lightseagreen;
-	text-decoration: none;;
+	color:  #b4d2ee;
+	text-decoration: none;
 }
 
 .footer-distributed .footer-links a:before {
@@ -129,7 +129,7 @@
 
 .footer-distributed .footer-company-about{
 	line-height: 20px;
-	color:  #92999f;
+	color:  #b8deff;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;

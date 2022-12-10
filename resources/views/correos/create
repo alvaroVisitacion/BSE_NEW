@@ -58,13 +58,13 @@ if (isset($_POST['submit'])) {
             $mail->isSMTP();
             $mail->Host = '127.0.0.1';
             $mail->SMTPAuth = true;
-            $mail->Username = 'visi7alvaro@gmail.com';
+            $mail->Username = 'informes@bse.com.pe';
             $mail->Password = 'alvaro836';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
 
-            $mail->setFrom('visi7alvaro@gmail.com', 'Emisor');
-            $mail->addAddress('visi7alvaro@gmail.com', 'Receptor');
+            $mail->setFrom('informes@bse.com.pe', 'Emisor');
+            $mail->addAddress('informes@bse.com.pe', 'Receptor');
             //$mail->addReplyTo('otro@dominio.com');
 
             $mail->isHTML(true);
@@ -236,13 +236,13 @@ if (isset($_POST['submit'])) {
             $mail->isSMTP();
             $mail->Host = '127.0.0.1';
             $mail->SMTPAuth = true;
-            $mail->Username = 'visi7alvaro@gmail.com';
+            $mail->Username = 'informes@bse.com.pe';
             $mail->Password = 'alvaro836';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
 
-            $mail->setFrom('visi7alvaro@gmail.com', 'Emisor');
-            $mail->addAddress('visi7alvaro@gmail.com', 'Receptor');
+            $mail->setFrom('informes@bse.com.pe', 'Emisor');
+            $mail->addAddress('informes@bse.com.pe', 'Receptor');
             //$mail->addReplyTo('otro@dominio.com');
 
             $mail->isHTML(true);

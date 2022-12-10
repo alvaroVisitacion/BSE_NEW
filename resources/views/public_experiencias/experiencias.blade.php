@@ -4,6 +4,7 @@
 <head>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/switch.css') }}">
+
 <style>
     @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
     html, body {
@@ -13,7 +14,7 @@
         font-weight: 200;
         height: 100vh;
         margin: 0;
-                
+
 
     }
 
@@ -45,7 +46,7 @@
         font-size: 84px;
     }
 
- 
+
     .m-b-md {
         margin-bottom: 30px;
     }
@@ -60,15 +61,14 @@
         width: 100%;
         /* display: flex; */
         max-width: 1000px;
-        height: 1000px;
-        margin: auto;  
-        background-image: url(../img/bod.jpg);
+        margin: auto;
+        background:linear-gradient(30deg, #02204B, #00C1FF);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
         opacity: 8px;
         position: center;
- 
+
     }
     .title-cards{
         width: 100%;
@@ -80,8 +80,6 @@
         color: #7a7a7a;
     }
     .card_{
-        width: 98%;  
-        height: 100%; 
         margin-top: 8%;
         margin-left: 1%;
         margin-right: 1%;
@@ -98,7 +96,7 @@
     }
     .card_ img{
         width: top;
-        height: top; 
+        height: top;
         border-radius: 10px solid brown;
     }
     .card_ .contenido-card{
@@ -106,17 +104,17 @@
         text-align: center;
     }
     .card_ .container-card h5{
-        margin-bottom: 15px; 
+        margin-bottom: 15px;
         color: #405FE9;
         text-align: center;
     }
     .card_ .container-card h7{
-        margin-bottom: 15px; 
+        margin-bottom: 15px;
         color: #12B5AF;
         text-align: center;
     }
     .card_ .container-card h6{
-        margin-bottom: 15px; 
+        margin-bottom: 15px;
         color: #030F47;
         text-align: center;
     }
@@ -148,25 +146,55 @@
         .card_{
             margin: 15px;
         }
+        .cardd {
+        margin-top: 10%;
+
     }
-    
+    }
+.details3 h1 {
+    font-size: 65px;
+    font-weight: 750;
+    margin-left: 30px;
+    margin-top: 11px;
+    -webkit-text-fill-color:  #d6edff;
+}
+.cardd {
+    margin-top: 5%;
+
+}
+
+@media only screen and  (max-width:1000px) {
+
+    .linea {
+        background: linear-gradient(30deg, #2D9494, #020226);
+        height: 5px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+      }
+      .cardd {
+        margin-top: 18%;
+
+    }
+}
+
+
 </style>
 
  </head>
 
 
-<div class="card_">
-    <div class="tittle-cards">
-         <h2><font color="black" size="6" style="font-family: Times New Roman" >EQUIPO DE TRABAJO</font></h2>  
+    <div class="cardd">
+    <div class="tittle-cards details3 ">
+         <h1><font  >EQUIPO DE TRABAJO</font></h1>
     </div>
     <div class="card-body">
         <div class="container-card ">
-         <div class="row contenido">       
-        
+         <div class="row contenido">
+
             </div>
         </div>
     </div>
-</div> 
+</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
 <script>
@@ -177,8 +205,8 @@
 
     var alvaro='';
                 for(vari=0;vari<arr.length;vari++){
-                    $('.contenido').append(` 
-                
+                    $('.contenido').append(`
+
                     <div class="col-md-12">
                     <div class="card_">
                         <div class="card-body ${arr[vari]["exp_codigo"]}" data-alv="${arr[vari]["exp_nombre"]}" data-des="${arr[vari]["exp_profesion"]}" data-ini="${arr[vari]["exp_resumen"]}" data-in="${arr[vari]["exp_experiencia"]}" >
@@ -202,19 +230,19 @@
 
                          </div>
                         </div>
-                        
-                         
-                               
+
+
+
                          </div>
                      </div>
                 </div>
                     </div>
- 
-                
+
+
                      `);
 
-                
-                 
+
+
             $('.'+arr[vari]["exp_codigo"]).on('click',function(){
                     var data=$(this).data('alv');
                     var des=$(this).data('des');
@@ -225,7 +253,7 @@
                     var data=$(this).data('alv');
                     $('#des_'+data).hide();
              });
-                
+
              }
     });
 </script>

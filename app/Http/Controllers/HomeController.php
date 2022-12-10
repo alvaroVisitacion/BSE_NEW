@@ -36,5 +36,15 @@ class HomeController extends Controller
 
     //    return view('public_servicios.servicios')->with('datos',$datos);
     }
+    function mostar_Direc(Request $req,$value){
+
+        $data=DB::table('datos')->where('dat_codigo','=',$value)->first();
+        //$data->tipo=3;// es un evento
+        // var_dump($data);
+
+        return view('home',compact('data'));
+
+        // return $value;
+    }
 
 }

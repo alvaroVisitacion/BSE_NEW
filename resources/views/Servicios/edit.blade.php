@@ -84,6 +84,13 @@
                         <label for="">DESCRIPCION</label> 
                         <input  type="text" id="ser_descripcion" style="width:500px;height:100px"   value="{{$servicio->ser_descripcion}}" name="ser_descripcion" rows="3" class=" form-control" placeholder="descripcion"></input>                   
                     </div>
+                </div> 
+
+                <div class="col-md-12">
+                    <div class="row justify-content-center" id="titulo">
+                        <label for="">BENEFICIOS</label> 
+                        <input  type="text" id="ser_beneficio" style="width:500px;height:100px"   value="{{$servicio->ser_beneficio}}" name="ser_beneficio" rows="3" class=" form-control" placeholder="Beneficios"></input>                   
+                    </div>
                 </div>   
                 <br><br>   
 
